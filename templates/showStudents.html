@@ -1,0 +1,79 @@
+<!DOCTYPE hmtl>
+<html>
+    <header>
+        <title>Student List</title>
+
+        <style>
+            .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #0055b6;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #0055b6;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+div {
+      width: 25%;
+      margin: 0 auto;
+      border-radius: 5px;
+     
+      padding: 20px;
+    }
+            </style>
+    </header>
+
+<body>
+    <div>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for student in students %}
+                <td>{{student.studentId}}</td>
+                <td>{{student.studentFullName}}</td>
+                <td>{{student.studentAge}}</td>
+                {% endfor %}
+            </tr>
+        
+          
+        </tbody>
+    </table>
+</div>
+ 
+</body>
+
+</html>
+
+
+

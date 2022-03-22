@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>Update Student</title>
+  <style>
+    .label{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 16px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #0055b6;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    p{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #0055b6;
+    }
+    
+    div {
+      width: 50%;
+      margin: 0 auto;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+</header>
+<body>
+
+<div>
+  <form action='' method = "POST">
+    <p>Student ID <input class= "label"type = "integer" name = "studentId" value="{{student.studentId}}"/></p>
+    <p>Student Full Name <input  class= "label" type = "text" name="studentFullName" value = "{{student.studentFullName}}" /></p>
+    <p>Student Age <input  class= "label" type = "integer" name= "studentAge" value = "{{student.studentAge}}" /></p>
+  
+    <p><input type = "submit" value = "Submit" /></p>
+  </form>
+</div>  
+
+</body>
+</html>
